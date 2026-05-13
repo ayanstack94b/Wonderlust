@@ -11,16 +11,17 @@ const Navbar = () => {
                 <li><Link href={'/'}>Home</Link></li>
                 <li><Link href={'/destinations'}>Destinations</Link></li>
                 <li><Link href={'/my-bookings'}>My-Bookings</Link></li>
+                <li><Link href={'/add-destinantion'}>Add-Destination</Link></li>
             </ul>
 
             {/* nav logo */}
 
             <div className="">
-                <Image alt='logo' height={150} width={150} src={'/assets/Wanderlast.png'}></Image>
+                <Image className="w-32 h-auto" alt='logo' height={150} width={150} src={'/assets/Wanderlast.png'}></Image>
             </div>
 
             {/* navlinks */}
-            
+
             <ul className='flex justify-center items-center gap-5'>
                 <li><Link href={'/profile'}>Profile</Link></li>
                 <li><Link href={'/login'}>Login</Link></li>

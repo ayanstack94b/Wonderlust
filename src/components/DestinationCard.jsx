@@ -1,6 +1,9 @@
+import { Button } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaRegCalendar } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 import { LuMapPin } from 'react-icons/lu';
 
 const DestinationCard = ({ destination }) => {
@@ -41,7 +44,10 @@ const DestinationCard = ({ destination }) => {
                     </div>
 
                 </div>
-
+                <div className="">
+                    <Link href={`/destinations/${_id}`}>
+                        <Button variant='ghost' className={'mt-1 text-cyan-500'}>Book now<FiExternalLink></FiExternalLink> </Button></Link>
+                </div>
             </div>
         </div>
     );

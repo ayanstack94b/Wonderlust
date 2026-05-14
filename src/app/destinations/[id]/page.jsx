@@ -1,10 +1,14 @@
+
+import { EditModal } from '@/components/EditModal';
+import { Button } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
+import { BiEdit } from 'react-icons/bi';
 import { FaRegCalendar } from 'react-icons/fa';
 import { LuMapPin } from 'react-icons/lu';
 
-const DestinationDetailsPage = async({params}) => {
-    const {id} = await params 
+const DestinationDetailsPage = async ({ params }) => {
+    const { id } = await params
     console.log(id);
     const res = await fetch(`http://localhost:5000/destination/${id}`)
     const destination = await res.json()
@@ -12,7 +16,7 @@ const DestinationDetailsPage = async({params}) => {
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-10">
-
+           <EditModal destination= {destination}></EditModal>
             <div className="grid md:grid-cols-2 gap-10 items-start">
 
                 {/* Left Side Image */}
